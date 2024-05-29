@@ -50,23 +50,12 @@ def main():
 
     for row in mmls_xsv:
         if row['nodeName'] == node:
-            current['required'] = row['requiredLicense']
             current['designated'] = row['designatedLicense']
             break
 
     if not current:
         module.fail_json(
             msg="node %s not known by mmlslicense" % node,
-            mmlslicense=mmls,
-        )
-
-    if lic != current['required']:
-        module.fail_json(
-            msg="%s target %s license does not match required %s license" % (
-                node,
-                lic,
-                current['required']
-            ),
             mmlslicense=mmls,
         )
 
