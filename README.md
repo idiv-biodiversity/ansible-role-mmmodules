@@ -10,9 +10,8 @@ Table of Contents
 <!-- toc -->
 
 - [Requirements](#requirements)
-- [Role Variables](#role-variables)
-- [Dependencies](#dependencies)
 - [Module Usage](#module-usage)
+- [Dependencies](#dependencies)
 - [Example Playbook](#example-playbook)
   * [Top-Level Playbook](#top-level-playbook)
   * [Role Dependency](#role-dependency)
@@ -24,17 +23,7 @@ Table of Contents
 Requirements
 ------------
 
-- Ansible 2+
-
-Role Variables
---------------
-
-None.
-
-Dependencies
-------------
-
-None.
+- Ansible 2.4
 
 Module Usage
 ------------
@@ -88,24 +77,25 @@ Configuration can be done for node classes:
   run_once: yes
 ```
 
-Example Playbook
-----------------
-
-Add to `requirements.yml`:
+Dependencies
+------------
 
 ```yml
 ---
 
-- src: idiv-biodiversity.mmmodules
+# requirements.yml
+
+roles:
+
+  - name: idiv_biodiversity.mmmodules
+    src: https://github.com/idiv-biodiversity/ansible-role-mmmodules
+    version: vX.Y.Z
 
 ...
 ```
 
-Download:
-
-```console
-$ ansible-galaxy install -r requirements.yml
-```
+Example Playbook
+----------------
 
 ### Top-Level Playbook
 
@@ -118,7 +108,7 @@ Write a top-level playbook:
   hosts: filer
 
   roles:
-    - role: idiv-biodiversity.mmmodules
+    - role: idiv_biodiversity.mmmodules
 
 ...
 ```
@@ -132,7 +122,7 @@ Define the role dependency in `meta/main.yml`:
 
 dependencies:
 
-  - role: idiv-biodiversity.mmmodules
+  - role: idiv_biodiversity.mmmodules
 
 ...
 ```
