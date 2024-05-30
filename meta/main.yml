@@ -1,8 +1,9 @@
 ---
 
 galaxy_info:
-
   role_name: mmmodules
+  namespace: idiv_biodiversity
+
   author: Christian Krause
   description: 'modules for IBM Spectrum Scale'
   company: German Centre for Integrative Biodiversity Research (iDiv)
