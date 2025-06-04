@@ -141,6 +141,6 @@ Centre for Integrative Biodiversity Research (iDiv)][idiv].
 
 
 [IBM Spectrum Scale]: https://www.ibm.com/products/spectrum-scale
-[author]: https://www.idiv.de/en/groups_and_people/employees/details/61.html
+[author]: https://www.idiv.de/staff/christian-krause/
 [idiv]: https://www.idiv.de/
 [wookietreiber]: https://github.com/wookietreiber
